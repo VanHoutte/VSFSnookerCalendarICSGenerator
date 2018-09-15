@@ -1,0 +1,44 @@
+{
+    "validation": {
+        "emptyBody": "The body cannot be empty.",
+        "requiredField": "The {{field}} field is required.",
+        "requiredProperty": "The {{property}} property is required.",
+        "requiredUrlParam": "The {{field}} is required in the URL",
+        "incorrectExtension": "The files should have the following extensions: {{extensions}}",
+        "urlMissingParameters": "The URL is missing one or more parameters.",
+        "incorrectContentType": "The headers contain no Content-Type header set to {{contentType}}.",
+        "mustBeOfType": "The {{field}} must be of type {{type}}",
+        "mustBeHexColor": "The {{field}} must be a hex color",
+        "mustContainAAndOrB": "The request must contain either {{field1}} or {{field2}} or both",
+        "entityDoesNotExist": "The {{entity}} does not exist.",
+        "shouldBeOfValue": "Should match one of the following values: {{values}}.",
+        "forbiddenFileUpload": "One or more file types in your request are not allowed for security reasons.",
+        "mustBeInt": "{{field}} must be an integer",
+        "accessTokenProvideProfileType": "When access token is provided, a profile type should be provided that matches the following values: {{values}}.",
+        "propertyRequiredFor": "{{property}} is required for {{value}}",
+        "valueArrayCannotBeEmpty": "{{value}} array cannot be empty",
+        "valueIsntAnOption": "The given value ({{option}}) isn't an option for {{property}}"
+    },
+    "errors": {
+        "unknownError": "An unknown server error has occurred",
+        "notFound": "Entity not found.",
+        "unauthorized": "Unauthorized to access this resource.",
+        "badRequest": "Client send a bad request.",
+        "xmlProcessorError": "The XML is invalid.",
+        "thirdPartyError": "A third party service has thrown an error.",
+        "googleDriveError": "Something went wrong whilst communicating with Google Drive"
+    },
+    "messages": {
+        "callNotImplementedYet": "Call not implemented yet."
+    },
+    "notifications": {
+        "googleDriveAuthError": {
+            "title": "[CRITICAL] - MDT: Could not authenticate on Google Drive",
+            "body": "Something went wrong trying to authenticate on Google Drive. You should generate a new access token. More instructions can be found in the README.md of the mdt server repo."
+        },
+        "googleDrivePOIFilesNotFoundError": {
+            "title": "[CRITICAL] - MDT: POI files not found on Google Drive",
+            "body": "Something went wrong trying to find the POI files on Google Drive. You'll have to re-add the new ID's of the files in the config."
+        }
+    }
+}

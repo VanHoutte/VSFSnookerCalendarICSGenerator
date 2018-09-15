@@ -1,0 +1,16 @@
+{
+	"environment": "test",
+	"bodyLimit": "4096kb",
+	"defaultLang": "en",
+	"corsHeaders": [
+		"Link"
+	],
+	"log": {
+		"enable": true,
+		"dir": "logs/",
+		"filename": "log.log",
+		"level": "verbose",
+		"sequelize": true,
+		"express": true
+	}
+}

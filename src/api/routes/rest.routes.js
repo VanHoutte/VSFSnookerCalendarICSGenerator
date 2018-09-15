@@ -8,7 +8,7 @@ import * as CalendarController from "../controllers/calendar.controller";
 export default () => {
 	const api = Router();
 
-	api.post("/calendare/generate", CalendarController.generateICS);
+	api.get("/calendar/generate", CalendarController.generateICS);
 
 	return api;
 };

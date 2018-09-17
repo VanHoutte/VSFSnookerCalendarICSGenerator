@@ -5,7 +5,7 @@ var cheerio = require("cheerio");
 const ics = require("ics");
 const { writeFileSync } = require("fs");
 
-var teamName = "Keizer Karel 07";
+var teamName = "Keizer Karel 05";
 var weekDays = {
 	MA: 0,
 	DI: 1,
@@ -19,7 +19,8 @@ var weekDays = {
 export function generateICS(req, res) {
 	var icsEvents = [];
 	performRequest({
-		uri: "http://www.vsf-oostvlaanderen.be/nl/interclub/kalenders/235",
+		uri: "http://www.vsf-oostvlaanderen.be/nl/interclub/kalenders/236",
+		// uri: "http://www.vsf-oostvlaanderen.be/nl/interclub/kalenders/235",
 		method: "GET"
 	}).then((data) => {
 		let $ = cheerio.load(data, {
@@ -58,9 +59,9 @@ export function generateICS(req, res) {
 				var momentDate = moment(date, "YYYY-MM-DD")
 					.add(20, "hours")
 					.add(weekDays[day], "days");
-				// console.log("=========================================================");
-				// console.log(momentDate);
-				// console.log(home + " - " + out);
+				console.log("=========================================================");
+				console.log(momentDate);
+				console.log(home + " - " + out);
 				i += 2;
 
 				if (weekDays[day]) {
